@@ -29,6 +29,6 @@ if __name__ == "__main__":
 
     remi_debug: bool = "-d" in sys.argv
     app_debug: bool = "-d" in sys.argv
-    fmt: str = "%(asctime)s %(name)-20s | %(message)s"
+    fmt: str = "%(asctime)s %(name)-20s [%(lineno)4d] | %(message)s"
     coloredlogs.install(level = logging.DEBUG if app_debug else logging.INFO, fmt=fmt)
     start(MyApp, debug = remi_debug, address = "127.0.0.1", port = 8888, start_browser = "-b" in sys.argv)
