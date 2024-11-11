@@ -5,9 +5,7 @@
 import logging
 
 import remi.gui as gui
-from remi import App
-
-import remitools
+from remi import App, tools
 
 
 logger = logging.getLogger(__name__)
@@ -23,4 +21,4 @@ class MyApp(App):
         return container
 
 if __name__ == "__main__":
-    remitools.start(MyApp, "A template app", "Template FTW!")
+    tools.start(MyApp, "A template app", "Template FTW!")
